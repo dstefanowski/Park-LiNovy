@@ -227,6 +227,42 @@ footer {
   }
 }
 
+.nav-desktop {
+  display: none;
+  position: fixed;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 30px;
+  background-color: rgba(20, 20, 20, 0.45);
+  z-index: 100;
+
+  &__items {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__item,
+    a,
+    p {
+      display: inline-block;
+      height: 100%;
+      margin-right: 10px;
+      padding: 20px 5px;
+      font-size: 1.8rem;
+      color: c.$white;
+    }
+
+    .logo {
+      a {
+        font-size: 3rem;
+        font-family: "Delicious Handrawn", cursive;
+      }
+    }
+  }
+}
+
 .scroll-up {
   transform: translateY(0%);
 }
@@ -241,7 +277,7 @@ footer {
   align-items: center;
   height: 100vh;
   text-align: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.75)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65)),
     url("../img/hero.jpg");
   background-position: center;
   background-size: cover;
@@ -279,4 +315,24 @@ footer {
   .info {
     height: 40vh;
   }
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .burger-btn,
+  .nav {
+    display: none;
+  }
+
+  .nav-desktop {
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
 }
