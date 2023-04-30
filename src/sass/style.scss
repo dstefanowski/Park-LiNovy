@@ -235,6 +235,7 @@ footer {
   width: 100%;
   padding: 0 30px;
   background-color: rgba(20, 20, 20, 0.45);
+  transition: 0.3s;
   z-index: 100;
 
   &__items {
@@ -249,9 +250,26 @@ footer {
       display: inline-block;
       height: 100%;
       margin-right: 10px;
-      padding: 20px 5px;
+      padding: 10px 5px;
       font-size: 1.8rem;
       color: c.$white;
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        visibility: hidden;
+        height: 3px;
+        width: 100%;
+        transform: translateX(-120%);
+        background-color: #fff;
+        transition: 0.3s;
+      }
+
+      &:hover::after {
+        transform: translateX(0);
+        visibility: visible;
+      }
     }
 
     .logo {
