@@ -11,7 +11,7 @@ html,
 body {
   height: 100%;
   background-color: c.$white;
-  font-family: "Delicious Handrawn", cursive;
+  font-family: "Montserrat", sans-serif;
 }
 
 html {
@@ -20,14 +20,26 @@ html {
 }
 
 h1 {
+  margin-bottom: 30px;
   text-align: center;
   font-size: 4.6rem;
-  margin-bottom: 30px;
+  font-family: "Delicious Handrawn", cursive;
 }
 
 h2 {
-  text-align: center;
   margin-bottom: 20px;
+  text-align: center;
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 2rem;
+  margin: 0 20px;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 22px;
 }
 
 a {
@@ -153,10 +165,11 @@ footer {
 
 .nav {
   position: fixed;
-  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  top: 0;
   height: 100vh;
   width: 100%;
   transform: translateX(100%);
@@ -173,7 +186,7 @@ footer {
     position: relative;
     display: block;
     margin: 0.1em 0;
-    padding: 0.5em 1em;
+    padding: 0.1em 1em;
     font-size: 2.8rem;
     color: c.$white;
     text-align: center;
@@ -193,6 +206,23 @@ footer {
 
     &:hover::before {
       transform: scaleY(1);
+    }
+  }
+  &__socials {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    .fa-brands {
+      padding: 15px;
+      font-size: 5rem;
+    }
+
+    .fa-facebook {
+      color: c.$facebook;
+    }
+
+    .fa-instagram {
+      color: c.$instagram;
     }
   }
 }
@@ -222,7 +252,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40vh;
+  height: 50vh;
   width: 100%;
   padding: 50px 20px;
   margin-top: 0;
@@ -245,3 +275,8 @@ footer {
 
 // ===================================================================================================
 
+@media (min-width: 375px) {
+  .info {
+    height: 40vh;
+  }
+}
