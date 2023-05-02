@@ -12,6 +12,7 @@ body {
   height: 100%;
   background-color: c.$white;
   font-family: "Montserrat", sans-serif;
+  scroll-padding-top: 78px;
 }
 
 html {
@@ -296,6 +297,10 @@ footer {
       }
     }
   }
+}
+
+.bg-dark {
+  background-color: rgb(20, 20, 20);
 }
 
 .scroll-up {
