@@ -95,6 +95,7 @@ ul {
 }
 
 footer {
+  position: absolute;
   height: 100vh;
   padding: 10px 0;
   margin-top: 20px;
@@ -300,7 +301,14 @@ footer {
 }
 
 .bg-dark {
-  background-color: rgb(20, 20, 20);
+  // background-color: rgb(20, 20, 20);
+  background-color: c.$white;
+
+  .nav-desktop__item,
+  a,
+  p {
+    color: black;
+  }
 }
 
 .scroll-up {
@@ -318,13 +326,16 @@ footer {
   height: 100vh;
   text-align: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65)),
-    url("../img/hero.jpg");
+    url("../img/hero-small.jpg");
   background-position: center;
   background-size: cover;
   color: c.$dirty-white;
+  overflow: hidden;
+  // z-index: 100;
 }
 
 .info {
+  // position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -337,16 +348,26 @@ footer {
   color: c.$black;
   font-size: 2rem;
   overflow: hidden;
+  // z-index: 200;
 }
 
 .hours {
+  // position: absolute;
   display: flex;
   justify-content: center;
-  padding: 50px 0;
+  // height: 50vh;
+  width: 100%;
+  padding: 50px 10px 20px 10px;
   text-align: center;
   background-color: c.$dark-grey;
   color: c.$white;
   font-size: 2.8rem;
+  // z-index: 20000;
+
+  &__note {
+    margin-top: 30px;
+    font-size: 1.2rem;
+  }
 }
 
 // ===================================================================================================
@@ -355,12 +376,22 @@ footer {
   .info {
     height: 40vh;
   }
+
+  // .hours {
+  //   height: 60vh;
+  // }
 }
 
 @media (min-width: 576px) {
 }
 
 @media (min-width: 768px) {
+  .info {
+    height: 30vh;
+  }
+  // .hours {
+  //   height: 30vh;
+  // }
 }
 
 @media (min-width: 992px) {
