@@ -341,7 +341,7 @@ footer {
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: c.$pastel-green;
+      background-color: c.$dark-green;
     }
   }
 }
@@ -406,9 +406,13 @@ footer {
     height: 40vh;
   }
 
-  // .hours {
-  //   height: 60vh;
-  // }
+  .aboutus {
+    &__card {
+      p {
+        margin: 30px 50px;
+      }
+    }
+  }
 }
 
 @media (min-width: 576px) {
@@ -459,6 +463,37 @@ footer {
   .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65)),
       url("../img/hero.jpg");
+  }
+
+  .aboutus {
+    .wrapper {
+      max-width: 1400px;
+    }
+    &__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__card {
+      display: flex;
+      flex-direction: row;
+      margin: 30px;
+
+      img {
+        margin-right: 60px;
+      }
+
+      &--card2 {
+        flex-direction: row-reverse;
+
+        img {
+          margin-right: 0;
+          margin-left: 60px;
+        }
+      }
+    }
   }
 }
 
