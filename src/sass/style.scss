@@ -331,11 +331,22 @@ footer {
   background-size: cover;
   color: c.$dirty-white;
   overflow: hidden;
-  // z-index: 100;
+
+  .check {
+    margin-top: 20px;
+    padding: 15px 25px;
+    background-color: c.$main-green;
+    color: c.$white;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: c.$pastel-green;
+    }
+  }
 }
 
 .info {
-  // position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -348,25 +359,27 @@ footer {
   color: c.$black;
   font-size: 2rem;
   overflow: hidden;
-  // z-index: 200;
 }
 
 .hours {
-  // position: absolute;
   display: flex;
   justify-content: center;
-  // height: 50vh;
   width: 100%;
   padding: 50px 10px 20px 10px;
   text-align: center;
   background-color: c.$dark-grey;
   color: c.$white;
   font-size: 2.8rem;
-  // z-index: 20000;
 
   &__note {
     margin-top: 30px;
     font-size: 1.2rem;
+  }
+
+  &__info {
+    padding: 30px 10px;
+    text-align: center;
+    border: 1px solid white;
   }
 }
 
@@ -386,12 +399,35 @@ footer {
 }
 
 @media (min-width: 768px) {
+  h2 {
+    font-size: 2.8rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+  }
+
+  .burger-btn {
+    top: 50px;
+    right: 50px;
+  }
+
+  .hero {
+    .check {
+      margin-top: 60px;
+    }
+  }
+
   .info {
     height: 30vh;
+    padding: 50px 90px;
   }
-  // .hours {
-  //   height: 30vh;
-  // }
+
+  .hours {
+    &__info {
+      padding: 55px 10px;
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -402,6 +438,11 @@ footer {
 
   .nav-desktop {
     display: flex;
+  }
+
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65)),
+      url("../img/hero.jpg");
   }
 }
 

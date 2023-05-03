@@ -7,7 +7,7 @@ const navDesktop = document.querySelector(".nav-desktop");
 window.onscroll = () => {
   let currentScrollPos = window.pageYOffset;
 
-  if (currentScrollPos > 768) {
+  if (currentScrollPos > 689) {
     navDesktop.classList.add("bg-dark");
   } else {
     navDesktop.classList.remove("bg-dark");
