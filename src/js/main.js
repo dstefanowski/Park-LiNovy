@@ -54,3 +54,4 @@ burgerBtn.addEventListener("click", handleNav);
 let rellax = new Rellax(".rellax", {});
 
 // ===========================================================================
+AOS.init();
