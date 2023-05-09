@@ -95,9 +95,10 @@ ul {
 }
 
 footer {
+  height: 100vh;
   padding: 10px 0;
   margin-top: 20px;
-  background-color: black;
+  background-color: c.$white;
 }
 
 .wrapper {
@@ -396,6 +397,37 @@ footer {
       text-align: center;
       margin: 30px 5px;
     }
+
+    &--card2 {
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__green-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: c.$white;
+    text-align: center;
+
+    .green-box__card {
+      padding: 35px 20px;
+      background-color: c.$main-green;
+
+      &--light {
+        background-color: c.$light-green;
+        // color: c.$black;
+      }
+    }
+
+    i {
+      margin-bottom: 30px;
+      color: c.$black;
+      font-size: 7rem;
+    }
   }
 }
 // ===================================================================================================
@@ -409,6 +441,12 @@ footer {
     &__card {
       p {
         margin: 30px 50px;
+      }
+
+      &--card2 {
+        p {
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -447,6 +485,16 @@ footer {
       padding: 55px 10px;
     }
   }
+
+  .aboutus {
+    &__green-box {
+      flex-direction: row;
+      background-color: c.$main-green;
+      .green-box__card {
+        width: 34%;
+      }
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -480,6 +528,10 @@ footer {
       flex-direction: row;
       margin: 30px;
 
+      p {
+        margin: 30px 30px;
+      }
+
       img {
         margin-right: 60px;
       }
@@ -493,8 +545,50 @@ footer {
         }
       }
     }
+
+    &__green-box {
+      height: 400px;
+      justify-content: space-around;
+      // background-color: c.$dark-green;
+      background-image: linear-gradient(
+          rgba(11, 43, 31, 0.9),
+          rgba(12, 48, 37, 0.9)
+        ),
+        url("../img/bg-park.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      .green-box__card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-image: linear-gradient(15deg, #0f5c4b 0%, #619c95 100%);
+      }
+    }
   }
 }
 
 @media (min-width: 1200px) {
+  .aboutus {
+    &__green-box {
+      height: 540px;
+      justify-content: center;
+      background-color: c.$dark-green;
+      .green-box__card {
+        width: 420px;
+        height: 420px;
+        margin-right: 1%;
+        margin-left: 1%;
+        // padding: 100px;
+        border-radius: 50%;
+
+        p {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
 }
