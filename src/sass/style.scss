@@ -444,14 +444,20 @@ footer {
     overflow: auto;
 
     .prices__card {
+      min-width: 271px;
       margin-right: 15px;
       margin-bottom: 20px;
       padding: 15px;
-      background-color: c.$light-grey;
-      box-shadow: 3px 2px 2px 0px rgba(153, 153, 153, 1);
+      // background-color: c.$light-grey;
+      background-color: #edf2e7;
+      box-shadow: 4px 3px 4px 0px rgba(112, 112, 112, 0.6);
       border-radius: 15px;
 
       .card__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 126px;
         padding: 40px 45px;
         background-color: c.$dark-grey;
         color: c.$white;
@@ -670,6 +676,14 @@ footer {
           font-size: 2rem;
         }
       }
+    }
+  }
+}
+
+@media (min-width: 1366px) {
+  .prices {
+    &__box {
+      overflow: hidden;
     }
   }
 }
