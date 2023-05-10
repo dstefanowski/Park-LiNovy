@@ -13,7 +13,7 @@ body {
   // background-color: c.$white;
   // background-color: c.$black;
   font-family: "Montserrat", sans-serif;
-  scroll-padding-top: 78px;
+  scroll-padding-top: 30px;
 }
 
 html {
@@ -35,8 +35,9 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
   margin: 0 20px;
+  text-align: center;
+  font-size: 2rem;
 }
 
 p {
@@ -431,6 +432,60 @@ footer {
     }
   }
 }
+
+.prices {
+  .section-title {
+    margin: 30px;
+  }
+
+  &__box {
+    display: flex;
+    margin: 0 15px;
+    overflow: auto;
+
+    .prices__card {
+      margin-right: 15px;
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: c.$light-grey;
+      box-shadow: 3px 2px 2px 0px rgba(153, 153, 153, 1);
+      border-radius: 15px;
+
+      .card__title {
+        padding: 40px 45px;
+        background-color: c.$dark-grey;
+        color: c.$white;
+        box-shadow: 0px 5px 0px 0px rgba(214, 214, 214, 0.5);
+        border-radius: 12px;
+      }
+
+      .card__content {
+        .heading {
+          margin-top: 25px;
+          margin-bottom: 15px;
+        }
+
+        .card__options {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+
+          .option {
+            display: flex;
+            justify-content: space-between;
+            width: 95%;
+            margin: 5px 0;
+            padding: 10px 20px;
+            background-color: c.$white;
+            box-shadow: 0px 1px 0px 0px rgba(82, 147, 124, 0.5);
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
 // ===================================================================================================
 
 @media (min-width: 375px) {
@@ -447,6 +502,21 @@ footer {
       &--card2 {
         p {
           margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .prices {
+    .section-title {
+      margin: 45px;
+    }
+
+    &__box {
+      .prices__card {
+        margin-right: 25px;
+        .card__title {
+          padding: 40px 60px;
         }
       }
     }
@@ -499,6 +569,11 @@ footer {
 }
 
 @media (min-width: 992px) {
+  body,
+  html {
+    scroll-padding-top: 78px;
+  }
+
   .burger-btn,
   .nav {
     display: none;
