@@ -8,9 +8,9 @@ window.onscroll = () => {
   let currentScrollPos = window.pageYOffset;
 
   if (currentScrollPos > 689) {
-    navDesktop.classList.add("bg-dark");
+    navDesktop.classList.add("bcg-dark");
   } else {
-    navDesktop.classList.remove("bg-dark");
+    navDesktop.classList.remove("bcg-dark");
   }
 };
 // =============================================================================
