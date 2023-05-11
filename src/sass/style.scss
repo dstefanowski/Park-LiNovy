@@ -435,7 +435,9 @@ footer {
 
 .prices {
   padding-top: 5px;
-  background-color: rgb(94, 107, 100);
+  padding-bottom: 5px;
+  // background-color: rgb(94, 107, 100);
+  background-color: #EEECEC;
 
   .section-title {
     margin: 30px;
@@ -455,7 +457,7 @@ footer {
       // background-color: #edf2e7;
 
       box-shadow: 1px 1px 2px 0px rgba(37, 99, 73, 0.4);
-      border: 2px solid rgb(80, 80, 80);
+      // border: 2px solid rgb(80, 80, 80);
       border-radius: 15px;
 
       .card__title {
@@ -464,7 +466,8 @@ footer {
         align-items: center;
         min-height: 126px;
         padding: 40px 45px;
-        background-color: c.$dark-grey;
+        // background-color: c.$dark-grey;
+        background-color: c.$light-green;
         color: c.$white;
         box-shadow: 0px 5px 0px 0px rgba(214, 214, 214, 0.5);
         border-radius: 12px;
@@ -498,10 +501,47 @@ footer {
     }
   }
 
+  .accordion {
+    margin: 10px 20px;
+
+    .accordion-item {
+
+    }
+
+    .accordion-button {
+      padding: 10px;
+      font-size: 1.4rem;
+      font-weight: 700;
+      background-color: c.$grey;
+      color: c.$white;
+      border: none;
+    }
+
+    button:hover {
+      background-color: c.$dark-grey;
+    }
+
+    button:active {
+      background-color: c.$grey;
+      color: c.$white;
+    }
+
+    button:focus {
+      background-color: c.$grey;
+      color: c.$white;
+    }
+
+    .accordion-body {
+      font-size: 1.2rem;
+    }
+  }
+
   &__warning {
     margin-top: 25px;
     text-align: center;
   }
+
+
 }
 // ===================================================================================================
 
@@ -526,7 +566,7 @@ footer {
 
   .prices {
     .section-title {
-      margin: 45px;
+      // margin: 45px;
     }
 
     &__box {
