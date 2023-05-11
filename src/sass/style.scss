@@ -396,8 +396,8 @@ footer {
     align-items: center;
     flex-direction: column;
     p {
-      text-align: center;
       margin: 30px 5px;
+      text-align:justify;
     }
 
     &--card2 {
@@ -684,6 +684,19 @@ footer {
   .prices {
     &__box {
       overflow: hidden;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .prices {
+    .wrapper {
+      max-width: 1400px;
+    }
+    &__box {
+      .prices__card {
+        min-width: 320px;
+      }
     }
   }
 }
