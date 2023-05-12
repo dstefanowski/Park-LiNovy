@@ -13,7 +13,7 @@ body {
   // background-color: c.$white;
   // background-color: c.$black;
   font-family: "Montserrat", sans-serif;
-  scroll-padding-top: 30px;
+  // scroll-padding-top: 39px;
 }
 
 html {
@@ -387,8 +387,9 @@ footer {
 }
 
 .aboutus {
+  padding-top: 30px;
   &__content {
-    margin: 50px 20px;
+    margin: 20px 20px;
   }
 
   &__card {
@@ -437,7 +438,7 @@ footer {
   padding-top: 5px;
   padding-bottom: 5px;
   // background-color: rgb(94, 107, 100);
-  background-color: #EEECEC;
+  background-color: #eeecec;
 
   .section-title {
     margin: 30px;
@@ -454,10 +455,7 @@ footer {
       margin-bottom: 20px;
       padding: 15px;
       background-color: c.$white;
-      // background-color: #edf2e7;
-
       box-shadow: 1px 1px 2px 0px rgba(37, 99, 73, 0.4);
-      // border: 2px solid rgb(80, 80, 80);
       border-radius: 15px;
 
       .card__title {
@@ -466,7 +464,6 @@ footer {
         align-items: center;
         min-height: 126px;
         padding: 40px 45px;
-        // background-color: c.$dark-grey;
         background-color: c.$light-green;
         color: c.$white;
         box-shadow: 0px 5px 0px 0px rgba(214, 214, 214, 0.5);
@@ -477,6 +474,7 @@ footer {
         .heading {
           margin-top: 25px;
           margin-bottom: 15px;
+          font-weight: 700;
         }
 
         .card__options {
@@ -504,17 +502,20 @@ footer {
   .accordion {
     margin: 10px 20px;
 
-    .accordion-item {
-
-    }
-
     .accordion-button {
       padding: 10px;
       font-size: 1.4rem;
       font-weight: 700;
       background-color: c.$grey;
       color: c.$white;
-      border: none;
+
+      &::after {
+        color: #fff;
+      }
+    }
+
+    i {
+      color: c.$white;
     }
 
     button:hover {
@@ -529,6 +530,8 @@ footer {
     button:focus {
       background-color: c.$grey;
       color: c.$white;
+      border: none;
+      box-shadow: none;
     }
 
     .accordion-body {
@@ -536,12 +539,80 @@ footer {
     }
   }
 
-  &__warning {
-    margin-top: 25px;
+  &__gloves {
     text-align: center;
+    font-weight: 700;
+    font-size: 1.8rem;
   }
 
+  &__warning {
+    margin: 20px 20px 0 20px;
+    text-align: center;
+    background-color: rgb(240, 209, 153);
+    border-radius: 10px;
 
+    p {
+      padding: 10px;
+    }
+  }
+
+  .other-activities {
+    &__box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      padding: 10px;
+    }
+
+    &__card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 10px;
+      padding: 10px 10px 0 10px;
+      background-color: c.$white;
+      border-radius: 10px;
+      box-shadow: 1px 1px 2px 0px rgba(37, 99, 73, 0.4);
+
+      .act-card-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      hr {
+        height: 1px;
+        width: 80%;
+        margin-bottom: 0;
+        color: c.$main-green;
+      }
+
+      .variants {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin: 15px;
+
+        .variant {
+          padding: 10px 15px;
+          background-color: c.$white;
+          border-radius: 10px;
+          box-shadow: 1px 1px 2px 0px rgba(37, 99, 73, 0.8);
+
+          .time {
+            font-size: 1.2rem;
+            font-weight: 700;
+          }
+
+          .price {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
 }
 // ===================================================================================================
 
@@ -565,10 +636,6 @@ footer {
   }
 
   .prices {
-    .section-title {
-      // margin: 45px;
-    }
-
     &__box {
       .prices__card {
         margin-right: 25px;
@@ -577,10 +644,23 @@ footer {
         }
       }
     }
+
+    .other-activities {
+      &__card {
+        width: 90%;
+      }
+    }
   }
 }
 
 @media (min-width: 576px) {
+  .prices {
+    .other-activities {
+      &__box {
+        flex-direction: row;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -620,6 +700,32 @@ footer {
       background-color: c.$main-green;
       .green-box__card {
         width: 34%;
+      }
+    }
+  }
+
+  .prices {
+    .other-activities {
+      .act-card-title {
+        font-size: 1.8rem;
+      }
+      &__card {
+        width: 50%;
+
+        .variants {
+          .variant {
+            width: 25%;
+            text-align: center;
+
+            .time {
+              font-size: 1.6rem;
+            }
+
+            .price {
+              font-size: 1.6rem;
+            }
+          }
+        }
       }
     }
   }
