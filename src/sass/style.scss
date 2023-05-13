@@ -342,6 +342,11 @@ footer {
   color: c.$dirty-white;
   overflow: hidden;
 
+  .hero__text {
+    opacity: 1;
+    transition: opacity 0.2s;
+  }
+
   .check {
     margin-top: 20px;
     padding: 15px 25px;
@@ -764,8 +769,7 @@ footer {
 }
 
 .green {
-    color: green !important;
-  
+  color: green !important;
 }
 // ===================================================================================================
 
