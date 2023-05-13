@@ -468,7 +468,9 @@ footer {
         align-items: center;
         min-height: 126px;
         padding: 40px 45px;
-        background-color: c.$light-green;
+        // background-color: c.$light-green;
+        // background-color: grey;
+        background-color: c.$dark-green2;
         color: c.$white;
         box-shadow: 0px 5px 0px 0px rgba(214, 214, 214, 0.5);
         border-radius: 12px;
@@ -618,6 +620,7 @@ footer {
     }
   }
 }
+
 .routes {
   display: flex;
   justify-content: center;
@@ -706,6 +709,11 @@ footer {
 
       .fa-comment-dots {
         color: c.$light-green;
+        transition: color 0.2s;
+
+        &:hover {
+          color: c.$dark-green;
+        }
       }
 
       button {
