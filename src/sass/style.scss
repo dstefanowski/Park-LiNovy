@@ -652,15 +652,41 @@ footer {
 }
 
 .rates {
+  padding-top: 5px;
   background-color: c.$white;
+
+  .rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__faces {
+      display: flex;
+
+      img {
+        width: 70px;
+        margin-right: 10px;
+        border-radius: 50%;
+      }
+    }
+
+    &__stars {
+      margin: 30px;
+      .fa-star {
+        font-size: 3.4rem;
+        color: gold;
+      }
+    }
+  }
 
   .opinion {
     &__card {
       display: flex;
-      justify-content: center;
+      justify-content: start;
       align-items: center;
       flex-direction: column;
-      min-height: 340px;
+      min-height: 370px;
       margin: 10px;
       padding: 15px;
       border: 1px solid c.$light-grey;
@@ -679,7 +705,7 @@ footer {
       }
 
       .fa-comment-dots {
-        color: c.$main-green;
+        color: c.$light-green;
       }
 
       button {
@@ -976,6 +1002,10 @@ footer {
         p {
           padding: 20px 25px 40px 25px;
         }
+      }
+
+      &__card {
+        min-height: 500px;
       }
     }
   }
