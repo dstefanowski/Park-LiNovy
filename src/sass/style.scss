@@ -11,7 +11,7 @@ html,
 body {
   height: 100%;
   // background-color: c.$white;
-  // background-color: c.$black;
+  background-color: c.$dark-green;
   font-family: "Montserrat", sans-serif;
   // scroll-padding-top: 39px;
 }
@@ -19,6 +19,10 @@ body {
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+}
+
+main {
+  background-color: c.$white;
 }
 
 h1 {
@@ -107,6 +111,10 @@ footer {
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
+}
+
+.section-title {
+  margin: 30px;
 }
 
 // -----------------------------------------
@@ -388,6 +396,7 @@ footer {
 
 .aboutus {
   padding-top: 30px;
+  background-color: c.$white;
   &__content {
     margin: 20px 20px;
   }
@@ -437,12 +446,7 @@ footer {
 .prices {
   padding-top: 5px;
   padding-bottom: 5px;
-  // background-color: rgb(94, 107, 100);
-  background-color: #eeecec;
-
-  .section-title {
-    margin: 30px;
-  }
+  background-color: rgba(238, 236, 236, 0.3);
 
   &__box {
     display: flex;
@@ -614,6 +618,116 @@ footer {
     }
   }
 }
+.routes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 10% 50px 10%;
+  background-color: c.$half-dark;
+  overflow: hidden;
+
+  .check-routes {
+    border: 1px solid c.$white;
+
+    i {
+      transition: transform 0.2s;
+    }
+
+    h2 {
+      padding: 0;
+      margin-top: 20px;
+      color: c.$white;
+      font-size: 2rem;
+      transition: 0.2s;
+    }
+
+    &:hover h2 {
+      color: c.$light-green;
+    }
+
+    &:hover i {
+      transform: translateX(20%);
+    }
+  }
+}
+
+.rates {
+  background-color: c.$white;
+
+  .opinion {
+    &__card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 340px;
+      margin: 10px;
+      padding: 15px;
+      border: 1px solid c.$light-grey;
+      border-radius: 8px;
+    }
+
+    &__icons {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      i {
+        // margin: 10px;
+        font-size: 2.8rem;
+        background: none;
+      }
+
+      .fa-comment-dots {
+        color: c.$main-green;
+      }
+
+      button {
+        background: none;
+      }
+    }
+
+    &__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__name {
+      .name {
+        text-decoration: underline;
+      }
+    }
+
+    &__date {
+      .date {
+        font-size: 1.2em;
+        font-weight: 700;
+      }
+    }
+
+    &__stars {
+      i {
+        color: gold;
+        font-size: 1.4rem;
+      }
+    }
+
+    &__text {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: c.$dirty-white;
+      border-radius: 8px;
+
+      .google-link {
+        display: flex;
+        justify-content: end;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
 // ===================================================================================================
 
 @media (min-width: 375px) {
@@ -624,7 +738,7 @@ footer {
   .aboutus {
     &__card {
       p {
-        margin: 30px 50px;
+        margin: 30px;
       }
 
       &--card2 {
@@ -729,6 +843,16 @@ footer {
       }
     }
   }
+
+  .routes {
+    padding: 50px 25%;
+
+    .check-routes {
+      h2 {
+        margin: 30px 0;
+      }
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -769,7 +893,7 @@ footer {
       margin: 30px;
 
       p {
-        margin: 30px 30px;
+        margin: 10px;
       }
 
       img {
@@ -844,6 +968,17 @@ footer {
       overflow: hidden;
     }
   }
+
+  .rates {
+    .opinion {
+      &__text {
+        margin: 25px 15px;
+        p {
+          padding: 20px 25px 40px 25px;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1920px) {
@@ -854,6 +989,16 @@ footer {
     &__box {
       .prices__card {
         min-width: 320px;
+      }
+    }
+  }
+
+  .routes {
+    padding: 50px 30%;
+
+    .check-routes {
+      h2 {
+        font-size: 2.4rem;
       }
     }
   }
