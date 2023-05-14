@@ -272,22 +272,6 @@ footer {
         // color: rgb(59, 150, 83);
         color: rgb(3, 92, 26);
       }
-
-      // &::after {
-      //   content: "";
-      //   display: inline-block;
-      //   visibility: hidden;
-      //   height: 3px;
-      //   width: 100%;
-      //   transform: translateX(-120%);
-      //   background-color: #fff;
-      //   transition: 0.3s;
-      // }
-
-      // &:hover::after {
-      //   transform: translateX(0);
-      //   visibility: visible;
-      // }
     }
 
     .fa-facebook {
@@ -771,6 +755,23 @@ footer {
 .green {
   color: green !important;
 }
+
+.contact {
+  height: 80vh;
+  padding: 5px 0;
+
+  .section-title {
+    // color: c.$white;
+  }
+
+  .map {
+    height: 100vh;
+    margin: 0;
+    padding: 10px 0;
+    background-color: #343434;
+  }
+}
+
 // ===================================================================================================
 
 @media (min-width: 375px) {
