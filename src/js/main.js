@@ -1,57 +1,5 @@
 // alert('Kod JS podpięty prawidłowo')
-// ===================================================================================
-// pobierz elementy nawigacji
-// const navLinks = document.querySelectorAll(".nav-desktop__items--links a");
-
-// // funkcja debounce
-// function debounce(func, wait = 20, immediate = true) {
-//   let timeout;
-//   return function () {
-//     const context = this,
-//       args = arguments;
-//     const later = function () {
-//       timeout = null;
-//       if (!immediate) func.apply(context, args);
-//     };
-//     const callNow = immediate && !timeout;
-//     clearTimeout(timeout);
-//     timeout = setTimeout(later, wait);
-//     if (callNow) func.apply(context, args);
-//   };
-// }
-
-// // dodaj nasłuchiwanie na scroll z opóźnieniem za pomocą metody debounce
-// window.addEventListener(
-//   "scroll",
-//   debounce(() => {
-//     // pobierz pozycję aktualnie przewijanej strony
-//     const currentScrollPos = window.pageYOffset;
-
-//     // przeiteruj przez linki nawigacyjne
-//     navLinks.forEach((link) => {
-//       // pobierz sekcję powiązaną z linkiem
-//       const section = document.querySelector(link.hash);
-//       if (section) {
-//         // pobierz pozycję sekcji na ekranie
-//         const sectionTop = section.offsetTop - 100;
-//         const sectionBottom = sectionTop + section.offsetHeight;
-
-//         // jeśli sekcja jest widoczna na ekranie, dodaj aktywną klasę do linku
-//         if (
-//           currentScrollPos >= sectionTop &&
-//           currentScrollPos < sectionBottom
-//         ) {
-//           link.classList.add("green");
-//         } else {
-//           link.classList.remove("green");
-//         }
-//       }
-//     });
-//   }, 20)
-// );
-// };
-
-// ======================================================================
+// =======================================================================================
 // Zanikanie hero-text + Nav-desktop color change
 
 const navDesktop = document.querySelector(".nav-desktop");
