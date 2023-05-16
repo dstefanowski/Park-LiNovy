@@ -87,14 +87,20 @@ table {
   border-spacing: 0;
 }
 
-ul {
-  display: flex;
-  align-items: center;
-  font-size: 1.6rem;
-  list-style-type: none;
+// ul {
+//   display: flex;
+//   align-items: center;
+//   font-size: 1.6rem;
+//   list-style-type: none;
 
+//   li {
+//     margin: 20px 15px;
+//   }
+// }
+
+ul {
   li {
-    margin: 20px 15px;
+    font-size: 1.6rem;
   }
 }
 
@@ -878,6 +884,36 @@ footer {
         }
       }
     }
+  }
+}
+
+// ==================================================================================================
+
+.terms-page {
+  .nav-desktop {
+    background-color: rgba(20, 20, 20, 1);
+  }
+}
+
+.terms {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-color: c.$white;
+
+  h1 {
+    font-family: "Montserrat", sans-serif;
+  }
+  &__title {
+    margin: 50px 10px 25px 10px;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  p {
+    margin: 0 5px;
+  }
+
+  &__regards {
+    margin-top: 50px;
   }
 }
 
