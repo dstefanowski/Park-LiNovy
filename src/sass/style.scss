@@ -9,6 +9,7 @@
 
 html,
 body {
+  position: relative;
   height: 100%;
   // background-color: c.$white;
   background-color: c.$dark-green;
@@ -803,7 +804,12 @@ footer {
 
       .detail {
         margin: 0;
+        color: c.$white;
         font-size: 1.4rem;
+      }
+
+      .mail-address {
+        cursor: pointer;
       }
     }
   }
@@ -834,6 +840,15 @@ footer {
       }
     }
   }
+}
+
+#notification {
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  top: 25%;
+  left: 50%;
+  text-align: center;
 }
 
 // ===================================================================================================
