@@ -82,33 +82,31 @@ $(document).ready(function () {
 });
 // ===============================================================
 
-// function copyToClipboard(text) {
-//   navigator.clipboard.writeText(text);
-//   alert("Adres e-mail skopiowany do schowka!");
-
-// }
-
-
 function showAlert(message, duration) {
-  var alertDiv = document.createElement('div');
+  var alertDiv = document.createElement("div");
   alertDiv.innerText = message;
-  alertDiv.style.position = 'fixed';
-  alertDiv.style.top = '10px';
-  alertDiv.style.left = '50%';
-  alertDiv.style.transform = 'translateX(-50%)';
-  alertDiv.style.padding = '10px';
-  alertDiv.style.backgroundColor = 'lightblue';
-  alertDiv.style.border = '1px solid gray';
-  alertDiv.style.borderRadius = '5px';
-  alertDiv.style.zIndex = '9999';
+  alertDiv.style.position = "fixed";
+  alertDiv.style.top = "50px";
+  alertDiv.style.left = "50%";
+  alertDiv.style.width = "50%";
+  alertDiv.style.transform = "translateX(-50%)";
+  alertDiv.style.paddingTop = "20px";
+  alertDiv.style.paddingBottom = "20px";
+  alertDiv.style.paddingLeft = "30px";
+  alertDiv.style.paddingRight = "30px";
+  alertDiv.style.backgroundColor = "white";
+  alertDiv.style.border = "1px solid gray";
+  alertDiv.style.borderRadius = "5px";
+  alertDiv.style.fontSize = "14px";
+  alertDiv.style.zIndex = "9999";
   document.body.appendChild(alertDiv);
-  
-  setTimeout(function() {
+
+  setTimeout(function () {
     alertDiv.remove();
   }, duration);
 }
 
 function copyToClipboard(text) {
   navigator.clipboard.writeText(text);
-  showAlert('Adres e-mail skopiowany do schowka!', 2000); // 2000 ms = 2 sekundy
+  showAlert("Adres e-mail skopiowany do schowka!", 2000); // 2000 ms = 2 sekundy
 }

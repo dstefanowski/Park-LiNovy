@@ -277,17 +277,18 @@ footer {
 
       &:hover {
         // color: rgb(59, 150, 83);
-        color: rgb(3, 92, 26);
+        // color: rgb(3, 92, 26);
+        color: c.$grey;
       }
     }
 
     .fa-facebook {
-      color: c.$facebook;
+      color: c.$facebook2;
       font-size: 3rem;
       transition: color 0.2s;
 
       &:hover {
-        color: c.$facebook2;
+        color: c.$facebook;
       }
     }
 
@@ -808,8 +809,15 @@ footer {
         font-size: 1.4rem;
       }
 
+      .phone:hover,
       .mail-address {
         cursor: pointer;
+        transition: color 0.2s;
+      }
+
+      .phone:hover,
+      .mail-address:hover {
+        color: c.$light-grey;
       }
     }
   }
@@ -840,15 +848,6 @@ footer {
       }
     }
   }
-}
-
-#notification {
-  position: absolute;
-  width: 300px;
-  height: 150px;
-  top: 25%;
-  left: 50%;
-  text-align: center;
 }
 
 // ===================================================================================================
@@ -1012,6 +1011,10 @@ footer {
   .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65)),
       url("../img/hero.jpg");
+
+    h1 {
+      font-size: 7.8rem;
+    }
   }
 
   .aboutus {
