@@ -11,9 +11,9 @@ window.addEventListener("scroll", function () {
   heroText.style.opacity = 1 - scrollPosition / 400;
 
   if (heroText.style.opacity <= 0) {
-    navDesktop.classList.add("bcg-dark");
+    navDesktop.classList.add("bcg-white");
   } else {
-    navDesktop.classList.remove("bcg-dark");
+    navDesktop.classList.remove("bcg-white");
   }
 });
 
@@ -83,7 +83,7 @@ $(document).ready(function () {
 // ===============================================================
 
 function showAlert(message, duration) {
-  var alertDiv = document.createElement("div");
+  let alertDiv = document.createElement("div");
   alertDiv.innerText = message;
   alertDiv.style.position = "fixed";
   alertDiv.style.top = "50px";
@@ -97,6 +97,7 @@ function showAlert(message, duration) {
   alertDiv.style.backgroundColor = "white";
   alertDiv.style.border = "1px solid gray";
   alertDiv.style.borderRadius = "5px";
+  alertDiv.style.boxShadow = "0 2px 20px 0 black";
   alertDiv.style.fontSize = "14px";
   alertDiv.style.zIndex = "9999";
   document.body.appendChild(alertDiv);
@@ -108,5 +109,16 @@ function showAlert(message, duration) {
 
 function copyToClipboard(text) {
   navigator.clipboard.writeText(text);
-  showAlert("Adres e-mail skopiowany do schowka!", 2000); // 2000 ms = 2 sekundy
+  showAlert("Adres e-mail skopiowany do schowka!", 2000);
 }
+
+// =================================================================
+
+let currentYear = new Date().getFullYear();
+document.addEventListener("DOMContentLoaded", function () {
+  let copyright = document.querySelector(".copyright");
+  copyright.innerHTML =
+    "&copy; " +
+    currentYear +
+    " Park Linowy Kalisz | Utworzono przez: Dominik Stefanowski ";
+});

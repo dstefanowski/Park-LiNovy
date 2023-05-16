@@ -11,10 +11,8 @@ html,
 body {
   position: relative;
   height: 100%;
-  // background-color: c.$white;
   background-color: c.$dark-green;
   font-family: "Montserrat", sans-serif;
-  // scroll-padding-top: 39px;
 }
 
 html {
@@ -91,7 +89,6 @@ table {
 
 ul {
   display: flex;
-  // justify-content: center;
   align-items: center;
   font-size: 1.6rem;
   list-style-type: none;
@@ -102,9 +99,49 @@ ul {
 }
 
 footer {
-  height: 15vh;
-  padding: 10px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
   background-color: c.$black;
+  color: c.$light-grey;
+
+  hr {
+    width: 80%;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  h4 {
+    margin: 15px 0;
+    color: c.$white;
+    font-size: 2rem;
+  }
+
+  img {
+    max-width: 100px;
+  }
+
+  .infos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0;
+
+    i {
+      margin-top: 10px;
+      font-size: 4rem;
+    }
+  }
+
+  .copyright {
+    margin-top: 15px;
+    text-align: center;
+  }
 }
 
 .wrapper {
@@ -201,7 +238,6 @@ footer {
   }
 
   &__item {
-    // transform: translateX(50%);
     position: relative;
     display: block;
     margin: 0.1em 0;
@@ -229,7 +265,7 @@ footer {
   }
   &__socials {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 150px;
     .fa-brands {
       padding: 15px;
@@ -276,8 +312,6 @@ footer {
       overflow: hidden;
 
       &:hover {
-        // color: rgb(59, 150, 83);
-        // color: rgb(3, 92, 26);
         color: c.$grey;
       }
     }
@@ -302,8 +336,7 @@ footer {
   }
 }
 
-.bcg-dark {
-  // background-color: rgb(20, 20, 20);
+.bcg-white {
   background-color: c.$white;
 
   .nav-desktop__item,
@@ -311,13 +344,6 @@ footer {
   p {
     color: black;
   }
-}
-
-.scroll-up {
-  transform: translateY(0%);
-}
-.scroll-down {
-  transform: translateY(-150%);
 }
 // ===================================================================================================
 
@@ -357,7 +383,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
   width: 100%;
   padding: 50px 20px;
   margin-top: 0;
@@ -366,6 +391,11 @@ footer {
   color: c.$black;
   font-size: 2rem;
   overflow: hidden;
+
+  img {
+    max-width: 100px;
+    margin-top: 10px;
+  }
 }
 
 .hours {
@@ -388,6 +418,14 @@ footer {
     padding: 30px 10px;
     text-align: center;
     border: 1px solid white;
+
+    h3 {
+      margin: 20px;
+    }
+
+    p {
+      margin: 0 20px;
+    }
   }
 }
 
@@ -428,7 +466,6 @@ footer {
 
       &--light {
         background-color: c.$light-green;
-        // color: c.$black;
       }
     }
 
@@ -465,8 +502,6 @@ footer {
         align-items: center;
         min-height: 126px;
         padding: 40px 45px;
-        // background-color: c.$light-green;
-        // background-color: grey;
         background-color: c.$dark-green2;
         color: c.$white;
         box-shadow: 0px 5px 0px 0px rgba(214, 214, 214, 0.5);
@@ -493,7 +528,6 @@ footer {
             margin: 5px 0;
             padding: 10px 20px;
             background-color: c.$white;
-            // box-shadow: 0px 3px 0px 0px rgba(82, 147, 124, 0.5);
             box-shadow: 0px 2px 0px 0px rgba(35, 90, 58, 0.5);
             border-radius: 5px;
           }
@@ -765,7 +799,6 @@ footer {
 }
 
 .contact {
-  // height: 80vh;
   padding: 5px 0;
   background-color: #343434;
   color: c.$white;
@@ -787,14 +820,12 @@ footer {
     }
 
     &--title {
-      // margin-bottom: 25px;
       h3 {
         font-size: 1.6rem;
       }
     }
     &--section {
       display: flex;
-      // justify-content: space-around;
       justify-content: start;
       align-items: center;
 
@@ -853,10 +884,6 @@ footer {
 // ===================================================================================================
 
 @media (min-width: 375px) {
-  .info {
-    height: 40vh;
-  }
-
   .aboutus {
     &__card {
       p {
@@ -924,7 +951,6 @@ footer {
   }
 
   .info {
-    height: 30vh;
     padding: 50px 90px;
   }
 
@@ -1082,8 +1108,6 @@ footer {
 
   .contact {
     .wrapper {
-      // align-items: start;
-
       .contact__card {
         min-width: 320px;
         margin: 0 50px;
@@ -1126,7 +1150,6 @@ footer {
         height: 420px;
         margin-right: 1%;
         margin-left: 1%;
-        // padding: 100px;
         border-radius: 50%;
 
         p {
