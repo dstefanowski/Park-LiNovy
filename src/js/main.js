@@ -12,6 +12,8 @@ window.addEventListener("scroll", function () {
 
   if (heroText.style.opacity <= 0) {
     navDesktop.classList.add("bcg-white");
+  } else if (scrollPosition >= 500) {
+    navDesktop.classList.add("bcg-white");
   } else {
     navDesktop.classList.remove("bcg-white");
   }
@@ -81,7 +83,7 @@ $(document).ready(function () {
   });
 });
 // ===============================================================
-
+// Alert - email address to clipboard
 function showAlert(message, duration) {
   let alertDiv = document.createElement("div");
   alertDiv.innerText = message;
@@ -113,7 +115,7 @@ function copyToClipboard(text) {
 }
 
 // =================================================================
-
+// Footer year actualization
 let currentYear = new Date().getFullYear();
 document.addEventListener("DOMContentLoaded", function () {
   let copyright = document.querySelector(".copyright");

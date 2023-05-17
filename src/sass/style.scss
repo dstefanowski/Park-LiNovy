@@ -342,15 +342,6 @@ footer {
   }
 }
 
-.bcg-white {
-  background-color: c.$white;
-
-  .nav-desktop__item,
-  a,
-  p {
-    color: black;
-  }
-}
 // ===================================================================================================
 
 .hero {
@@ -917,6 +908,81 @@ footer {
   }
 }
 
+// ==================================================================================================
+
+.routes-page {
+  .nav-desktop {
+    background-color: rgba(20, 20, 20, 1);
+  }
+}
+
+.routes-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  background-color: c.$white;
+  background-image: linear-gradient(rgba(7, 20, 15, 0.9), rgba(7, 22, 18, 0.9)),
+    url("../img/bg-park.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+  .wrapper {
+    max-width: 1600px;
+  }
+
+  &__title {
+    margin: 50px 10px;
+    color: c.$white;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  p {
+    margin: 0 5px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    .end {
+      display: flex;
+      align-self: flex-end;
+      flex-direction: column;
+    }
+  }
+
+  &__route {
+    width: 85%;
+    margin: 10px 10px 40px 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: rgba($color: #fcffe6, $alpha: 0.9);
+    border-radius: 10px;
+
+    &--title {
+      font-weight: 700;
+      // background-color: rgba($color: #fcffe6, $alpha: 0.4);
+    }
+  }
+}
+
+// ==================================================================================================
+.bcg-white {
+  background-color: c.$white;
+
+  .nav-desktop__item,
+  a,
+  p {
+    color: black;
+  }
+}
+
 // ===================================================================================================
 
 @media (min-width: 375px) {
@@ -1116,12 +1182,6 @@ footer {
     &__green-box {
       height: 400px;
       justify-content: space-around;
-      // background-color: c.$dark-green;
-      // background-image: linear-gradient(
-      //     rgba(11, 43, 31, 0.9),
-      //     rgba(12, 48, 37, 0.9)
-      //   ),
-      //   url("../img/bg-park.jpg");
       background-image: linear-gradient(
           rgba(7, 20, 15, 0.9),
           rgba(7, 22, 18, 0.9)
@@ -1206,6 +1266,14 @@ footer {
       &--section {
         margin-left: 50px;
       }
+    }
+  }
+
+  .routes-section {
+    &__route {
+      width: 70%;
+      margin: 40px 40px 70px 40px;
+      padding: 30px 20px;
     }
   }
 }
