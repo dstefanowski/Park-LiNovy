@@ -37,6 +37,27 @@ const handleNav = () => {
 
 burgerBtn.addEventListener("click", handleNav);
 
+// =============================================================================
+// Rellax.js adder
+function addRellaxClass() {
+  if (window.innerWidth > 768) {
+    let boxElement = document.querySelector(".routes-section__box");
+    let routeElements = document.querySelectorAll(".routes-section__route");
+
+    if (boxElement) {
+      boxElement.classList.add("rellax");
+    }
+
+    if (routeElements.length > 0) {
+      routeElements.forEach(function (element) {
+        element.classList.add("rellax");
+      });
+    }
+  }
+}
+
+addRellaxClass();
+
 // ===========================================================================
 // Rellax.js
 let rellax = new Rellax(".rellax", {});
@@ -124,3 +145,4 @@ document.addEventListener("DOMContentLoaded", function () {
     currentYear +
     " Park Linowy Kalisz | Utworzono przez: Dominik Stefanowski ";
 });
+// =================================================================
