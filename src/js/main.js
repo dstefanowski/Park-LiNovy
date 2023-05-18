@@ -146,3 +146,24 @@ document.addEventListener("DOMContentLoaded", function () {
     " Park Linowy Kalisz | Utworzono przez: Dominik Stefanowski ";
 });
 // =================================================================
+document.addEventListener('DOMContentLoaded', function() {
+  var navLinks = document.querySelectorAll('.nav-desktop__item');
+
+  for (var i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener('click', function(event) {
+      var targetSectionId = this.getAttribute('href');
+
+      if (targetSectionId.startsWith('#')) {
+        event.preventDefault();
+        var targetSection = document.querySelector(targetSectionId);
+
+        if (targetSection) {
+          window.scrollTo({
+            top: targetSection.offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  }
+});
