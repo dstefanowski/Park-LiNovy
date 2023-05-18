@@ -6,18 +6,20 @@ const navDesktop = document.querySelector(".nav-desktop");
 
 const heroText = document.querySelector(".hero__text");
 
-window.addEventListener("scroll", function () {
-  const scrollPosition = window.pageYOffset;
-  heroText.style.opacity = 1 - scrollPosition / 400;
+if (heroText) {
+  window.addEventListener("scroll", function () {
+    const scrollPosition = window.pageYOffset;
+    heroText.style.opacity = 1 - scrollPosition / 400;
 
-  if (heroText.style.opacity <= 0) {
-    navDesktop.classList.add("bcg-white");
-  } else if (scrollPosition >= 500) {
-    navDesktop.classList.add("bcg-white");
-  } else {
-    navDesktop.classList.remove("bcg-white");
-  }
-});
+    if (heroText.style.opacity <= 0) {
+      navDesktop.classList.add("bcg-white");
+    } else if (scrollPosition >= 500) {
+      navDesktop.classList.add("bcg-white");
+    } else {
+      navDesktop.classList.remove("bcg-white");
+    }
+  });
+}
 
 // =============================================================================
 
@@ -146,24 +148,3 @@ document.addEventListener("DOMContentLoaded", function () {
     " Park Linowy Kalisz | Utworzono przez: Dominik Stefanowski ";
 });
 // =================================================================
-// document.addEventListener('DOMContentLoaded', function() {
-//   var navLinks = document.querySelectorAll('.nav-desktop__item');
-
-//   for (var i = 0; i < navLinks.length; i++) {
-//     navLinks[i].addEventListener('click', function(event) {
-//       var targetSectionId = this.getAttribute('href');
-
-//       if (targetSectionId.startsWith('#')) {
-//         event.preventDefault();
-//         var targetSection = document.querySelector(targetSectionId);
-
-//         if (targetSection) {
-//           window.scrollTo({
-//             top: targetSection.offsetTop,
-//             behavior: 'smooth'
-//           });
-//         }
-//       }
-//     });
-//   }
-// });
