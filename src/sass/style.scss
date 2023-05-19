@@ -316,10 +316,6 @@ footer {
     .fa-facebook {
       color: c.$facebook;
     }
-
-    .fa-instagram {
-      color: c.$instagram;
-    }
   }
 }
 
@@ -961,7 +957,7 @@ footer {
 
   &__title {
     position: absolute;
-    top: 85px;
+    top: 83px;
     width: 100%;
     padding: 10px 10px;
     background-color: c.$grey;
@@ -975,7 +971,7 @@ footer {
   .colorful {
     position: absolute;
     top: 79px;
-    height: 6px;
+    height: 9px;
     width: 100%;
     display: none;
     background-image: linear-gradient(
