@@ -11,7 +11,7 @@ html,
 body {
   position: relative;
   height: 100%;
-  // background-color: c.$dark-green;
+  background-color: c.$dark-grey;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -87,17 +87,6 @@ table {
   border-spacing: 0;
 }
 
-// ul {
-//   display: flex;
-//   align-items: center;
-//   font-size: 1.6rem;
-//   list-style-type: none;
-
-//   li {
-//     margin: 20px 15px;
-//   }
-// }
-
 ul {
   li {
     font-size: 1.6rem;
@@ -170,7 +159,13 @@ footer {
 
     i {
       margin-top: 10px;
+      color: c.$facebook2;
       font-size: 4rem;
+      opacity: 1;
+
+      &:hover {
+        color: c.$facebook;
+      }
     }
   }
 
@@ -198,6 +193,7 @@ footer {
 }
 
 // -----------------------------------------
+// NAVIGATION
 
 .burger-btn {
   position: fixed;
@@ -353,13 +349,14 @@ footer {
       }
     }
 
-    .fa-facebook {
-      color: c.$facebook2;
-      font-size: 3rem;
-      transition: color 0.2s;
+    .facebook {
+      width: 32px;
+      border: none;
+      border-radius: 50%;
+      transition: 0.2s;
 
       &:hover {
-        color: c.$facebook;
+        // box-shadow: 1px 2px grey;
       }
     }
 
@@ -374,35 +371,41 @@ footer {
 }
 
 // ===================================================================================================
+// MAIN SECTION
 
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
   text-align: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.25)),
     url("../img/hero-small.jpg");
   background-position: center;
   background-size: cover;
   color: c.$dirty-white;
   overflow: hidden;
 
-  .hero__text {
+  &__text {
+    padding: 30px 0;
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
     opacity: 1;
-    transition: opacity 0.2s;
+    transition: opacity 0.15s;
   }
 
   .check {
     margin-top: 20px;
-    padding: 15px 25px;
+    padding: 20px 35px;
     background-color: c.$main-green;
     color: c.$white;
+    // color: c.$main-green;
     border-radius: 8px;
-    transition: background-color 0.3s;
+    transition: 0.3s !important;
 
     &:hover {
-      background-color: c.$dark-green;
+      color: c.$black;
     }
   }
 }
@@ -828,8 +831,9 @@ footer {
 
 .contact {
   padding: 15px 0;
-  background-color: c.$dark-grey;
-  color: c.$white;
+  // background-color: c.$dark-grey;
+  background-color: c.$dirty-white;
+  color: c.$black;
 
   .wrapper {
     display: flex;
@@ -864,7 +868,7 @@ footer {
 
       .detail {
         margin: 0;
-        color: c.$white;
+        color: c.$black;
         font-size: 1.4rem;
       }
 
@@ -910,6 +914,7 @@ footer {
 }
 
 // ==================================================================================================
+// TERMS SUB-PAGE
 
 .terms-page {
   .nav-desktop {
@@ -940,6 +945,7 @@ footer {
 }
 
 // ==================================================================================================
+// ROUTES SUB-PAGE
 
 .routes-page {
   .nav-desktop {
@@ -1053,6 +1059,10 @@ footer {
 // ===================================================================================================
 
 @media (min-width: 375px) {
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.25)),
+      url("../img/hero.jpg");
+  }
   .aboutus {
     &__card {
       p {
@@ -1228,11 +1238,16 @@ footer {
   }
 
   .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65)),
-      url("../img/hero.jpg");
+    &__text {
+      padding: 65px 120px;
+    }
 
     h1 {
-      font-size: 7.8rem;
+      font-size: 8.4rem;
+    }
+
+    h3 {
+      font-size: 2.8rem;
     }
   }
 
@@ -1273,13 +1288,22 @@ footer {
     &__green-box {
       height: 400px;
       justify-content: space-around;
+      // background-image: linear-gradient(
+      //     rgba(7, 20, 15, 0.9),
+      //     rgba(7, 22, 18, 0.9)
+      //   ),
+      //   url("../img/bg-park.jpg");
+
       background-image: linear-gradient(
-          rgba(7, 20, 15, 0.9),
-          rgba(7, 22, 18, 0.9)
+          rgba(7, 20, 15, 0.3),
+          rgba(7, 22, 18, 0.1)
         ),
-        url("../img/bg-park.jpg");
+        url("../img/ropes.jpg");
+
+      background-size: cover;
       background-attachment: fixed;
       background-position: center;
+
       .green-box__card {
         display: flex;
         justify-content: center;
@@ -1288,7 +1312,11 @@ footer {
         width: 300px;
         height: 300px;
         border-radius: 50%;
-        background-image: c.$main-gradient;
+        // background-image: c.$main-gradient;
+
+        background-color: c.$warm-white;
+        color: #000;
+        box-shadow: 8px 8px 35px -10px rgba(41, 41, 41, 1);
       }
     }
   }
