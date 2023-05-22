@@ -354,10 +354,6 @@ footer {
       border: none;
       border-radius: 50%;
       transition: 0.2s;
-
-      &:hover {
-        // box-shadow: 1px 2px grey;
-      }
     }
 
     .logo {
@@ -398,14 +394,16 @@ footer {
   .check {
     margin-top: 20px;
     padding: 20px 35px;
-    background-color: c.$main-green;
-    color: c.$white;
+
+    // background-color: c.$light-cyan;
+    background-image: c.$cyan-gradient;
+    color: c.$black;
     // color: c.$main-green;
     border-radius: 8px;
     transition: 0.3s !important;
 
     &:hover {
-      color: c.$black;
+      color: c.$grey;
     }
   }
 }
@@ -448,7 +446,7 @@ footer {
   &__info {
     padding: 30px 10px;
     text-align: center;
-    border: 1px solid white;
+    border: 1px solid c.$white;
 
     h3 {
       margin: 20px;
@@ -559,7 +557,7 @@ footer {
             margin: 5px 0;
             padding: 10px 20px;
             background-color: c.$white;
-            box-shadow: 0px 2px 0px 0px rgba(35, 90, 58, 0.5);
+            box-shadow: 0px 2px 0px 0px c.$light-blue;
             border-radius: 5px;
           }
         }
@@ -587,7 +585,8 @@ footer {
     }
 
     button:hover {
-      background-color: c.$dark-grey;
+      background-color: c.$light-blue;
+      color: c.$black;
     }
 
     button:active {
@@ -707,7 +706,7 @@ footer {
     }
 
     &:hover h2 {
-      color: c.$light-green;
+      color: c.$light-blue;
     }
 
     &:hover i {
@@ -774,11 +773,11 @@ footer {
       }
 
       .fa-comment-dots {
-        color: c.$light-green;
+        color: c.$cyan;
         transition: color 0.2s;
 
         &:hover {
-          color: c.$dark-green;
+          color: c.$light-green;
         }
       }
 
@@ -872,7 +871,7 @@ footer {
         font-size: 1.4rem;
       }
 
-      .phone:hover,
+      .phone,
       .mail-address {
         cursor: pointer;
         transition: color 0.2s;
@@ -897,6 +896,11 @@ footer {
       position: absolute;
       top: 10px;
       left: 10px;
+
+      h4,
+      p {
+        color: c.$white;
+      }
 
       a,
       a:active,
@@ -980,11 +984,12 @@ footer {
     height: 9px;
     width: 100%;
     display: none;
-    background-image: linear-gradient(
-      210deg,
-      rgb(241, 240, 216),
-      rgba(109, 126, 119, 0.98)
-    );
+    // background-image: linear-gradient(
+    //   210deg,
+    //   rgb(241, 240, 216),
+    //   rgba(109, 126, 119, 0.98)
+    // );
+    background-image: c.$cyan-gradient;
   }
 }
 
@@ -995,7 +1000,8 @@ footer {
   flex-direction: column;
   padding-top: 240px;
   padding-bottom: 50px;
-  background-color: c.$half-dark;
+  // background-color: c.$half-dark;
+  background-color: c.$white;
   background-position: center;
   background-size: cover;
 
@@ -1041,6 +1047,18 @@ footer {
         width: 34px;
         height: 30px;
       }
+    }
+
+    .onestar {
+      color: green;
+    }
+
+    .twostars {
+      color: gold;
+    }
+
+    .threestars {
+      color: orange;
     }
   }
 }
@@ -1214,9 +1232,9 @@ footer {
     &__route {
       width: 85%;
       margin: 10px 10px 40px 10px;
-      background-color: rgba(238, 240, 223, 1);
+      background-color: rgb(244, 255, 234);
       border-radius: 35px;
-      box-shadow: 3px 3px 20px 2px rgba($color: c.$black, $alpha: 1);
+      box-shadow: 3px 3px 20px 2px rgba($color: c.$black, $alpha: 0.5);
     }
   }
 }
@@ -1314,7 +1332,8 @@ footer {
         border-radius: 50%;
         // background-image: c.$main-gradient;
 
-        background-color: c.$warm-white;
+        // // background-color: c.$light-cyan;
+        background-image: c.$cyan-gradient;
         color: #000;
         box-shadow: 8px 8px 35px -10px rgba(41, 41, 41, 1);
       }
