@@ -133,6 +133,14 @@ footer {
   background-color: c.$black;
   color: c.$light-grey;
 
+  a {
+    color: c.$cyan;
+
+    &:hover {
+      color: c.$light-blue;
+    }
+  }
+
   hr {
     width: 80%;
     margin-bottom: 20px;
@@ -322,7 +330,7 @@ footer {
   flex-direction: row;
   width: 100%;
   padding: 0 30px;
-  background-color: rgba(20, 20, 20, 0.45);
+  background-color: rgba(20, 20, 20, 0.55);
   transition: 0.3s;
   z-index: 100;
 
@@ -394,16 +402,13 @@ footer {
   .check {
     margin-top: 20px;
     padding: 20px 35px;
-
-    // background-color: c.$light-cyan;
-    background-image: c.$cyan-gradient;
+    background-color: c.$cyan;
     color: c.$black;
-    // color: c.$main-green;
     border-radius: 8px;
     transition: 0.3s !important;
 
     &:hover {
-      color: c.$grey;
+      background-color: c.$light-blue;
     }
   }
 }
@@ -486,15 +491,16 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: c.$white;
+    background-color: c.$cyan;
+    color: c.$black;
     text-align: center;
 
     .green-box__card {
       padding: 35px 20px;
-      background-color: c.$main-green;
+      background-color: c.$cyan;
 
       &--light {
-        background-color: c.$light-green;
+        background-color: c.$light-blue;
       }
     }
 
@@ -531,7 +537,7 @@ footer {
         align-items: center;
         min-height: 126px;
         padding: 40px 45px;
-        background-color: c.$dark-green2;
+        background-color: c.$dark-blue;
         color: c.$white;
         box-shadow: 0px 5px 0px 0px rgba(214, 214, 214, 0.5);
         border-radius: 12px;
@@ -666,7 +672,8 @@ footer {
           padding: 10px 15px;
           background-color: c.$white;
           border-radius: 10px;
-          box-shadow: 1px 1px 2px 0px rgba(37, 99, 73, 0.8);
+          border: 1px 1px solid c.$cyan;
+          box-shadow: 1px 1px 2px 0px c.$cyan;
 
           .time {
             font-size: 1.2rem;
@@ -767,7 +774,6 @@ footer {
       width: 100%;
 
       i {
-        // margin: 10px;
         font-size: 2.8rem;
         background: none;
       }
@@ -777,7 +783,7 @@ footer {
         transition: color 0.2s;
 
         &:hover {
-          color: c.$light-green;
+          color: c.$grey;
         }
       }
 
@@ -830,9 +836,9 @@ footer {
 
 .contact {
   padding: 15px 0;
-  // background-color: c.$dark-grey;
   background-color: c.$dirty-white;
   color: c.$black;
+  overflow: hidden;
 
   .wrapper {
     display: flex;
@@ -886,33 +892,9 @@ footer {
 
   .map {
     margin: 20px 0;
-    background-color: c.$dark-grey;
 
     &__img {
       position: relative;
-    }
-
-    &__location {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-
-      h4,
-      p {
-        color: c.$white;
-      }
-
-      a,
-      a:active,
-      a:visited {
-        color: c.$link;
-        text-decoration: underline;
-        transition: color 0.2s;
-
-        &:hover {
-          color: c.$link-hover;
-        }
-      }
     }
   }
 }
@@ -970,11 +952,12 @@ footer {
     top: 83px;
     width: 100%;
     padding: 10px 10px;
-    background-color: c.$grey;
-    color: c.$white;
+    background-color: c.$light-blue;
+    color: c.$black;
     font-size: 3rem;
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
+    box-shadow: 0 2px 5px c.$dark-grey;
     overflow: hidden;
   }
 
@@ -984,11 +967,6 @@ footer {
     height: 9px;
     width: 100%;
     display: none;
-    // background-image: linear-gradient(
-    //   210deg,
-    //   rgb(241, 240, 216),
-    //   rgba(109, 126, 119, 0.98)
-    // );
     background-image: c.$cyan-gradient;
   }
 }
@@ -1000,8 +978,7 @@ footer {
   flex-direction: column;
   padding-top: 240px;
   padding-bottom: 50px;
-  // background-color: c.$half-dark;
-  background-color: c.$white;
+  background-color: #fffef2;
   background-position: center;
   background-size: cover;
 
@@ -1160,7 +1137,6 @@ footer {
   .aboutus {
     &__green-box {
       flex-direction: row;
-      background-color: c.$main-green;
       .green-box__card {
         width: 34%;
       }
@@ -1212,6 +1188,13 @@ footer {
         margin: 30px 30px;
       }
     }
+
+    .map {
+      iframe {
+        width: 400px;
+        height: 400px;
+      }
+    }
   }
 
   .routes-page {
@@ -1230,9 +1213,8 @@ footer {
     }
 
     &__route {
-      width: 85%;
+      width: 75%;
       margin: 10px 10px 40px 10px;
-      background-color: rgb(244, 255, 234);
       border-radius: 35px;
       box-shadow: 3px 3px 20px 2px rgba($color: c.$black, $alpha: 0.5);
     }
@@ -1306,12 +1288,6 @@ footer {
     &__green-box {
       height: 400px;
       justify-content: space-around;
-      // background-image: linear-gradient(
-      //     rgba(7, 20, 15, 0.9),
-      //     rgba(7, 22, 18, 0.9)
-      //   ),
-      //   url("../img/bg-park.jpg");
-
       background-image: linear-gradient(
           rgba(7, 20, 15, 0.3),
           rgba(7, 22, 18, 0.1)
@@ -1330,11 +1306,9 @@ footer {
         width: 300px;
         height: 300px;
         border-radius: 50%;
-        // background-image: c.$main-gradient;
-
-        // // background-color: c.$light-cyan;
         background-image: c.$cyan-gradient;
         color: #000;
+        color: c.$black;
         box-shadow: 8px 8px 35px -10px rgba(41, 41, 41, 1);
       }
     }
@@ -1360,6 +1334,10 @@ footer {
 
       .map {
         padding-left: 50px;
+        iframe {
+          width: 600px;
+          height: 400px;
+        }
       }
 
       img {
@@ -1377,6 +1355,7 @@ footer {
       position: fixed;
       top: 85px;
       background-image: c.$second-gradient;
+      color: c.$white;
       z-index: 100;
     }
 
@@ -1409,8 +1388,8 @@ footer {
       justify-content: center;
       background-color: c.$dark-green;
       .green-box__card {
-        width: 420px;
-        height: 420px;
+        width: 370px;
+        height: 370px;
         margin-right: 1%;
         margin-left: 1%;
         border-radius: 50%;
@@ -1425,6 +1404,13 @@ footer {
   .contact {
     .wrapper {
       max-width: 1600px;
+
+      .map {
+        iframe {
+          width: 700px;
+          height: 500px;
+        }
+      }
     }
 
     &__card {
@@ -1478,7 +1464,6 @@ footer {
         padding: 50px 20px;
 
         p {
-          font-size: 2rem;
           line-height: 25px;
         }
       }
